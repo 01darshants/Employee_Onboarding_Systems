@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Title</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <style>
+        body {
+          background-image: url('static/Homepg/bgLog.jpg');
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-size: cover;
+        }
+        </style>
+
+</head>
+
+<body>
+  <header>
+    <!-- place navbar here -->
+  </header>
+  <main>
+    <div class="container">
+        <div class="row justify-content-center align-item-center" style="margin-top: 250px;">
+            <div class=" offset-3 col-5">
+                <img class="mw-100" src="https://www.google.com/url?sa=i&url=https%3A%2F%2Felearningindustry.com%2Fdesigning-employee-onboarding-program-dos-donts&psig=AOvVaw0AIzVwODrTU4Ul5UApzJYU&ust=1699537300412000&source=images&cd=vfe&ved=0CBIQjRxqFwoTCJDZmPrDtIIDFQAAAAAdAAAAABAE">
+            </div>
+            <div class="col-4">
+                <!-- <h3 style="color: yellow;">Login</h3> -->
+                <form action="#" method="post" style="width: 400px; margin-top: 50px;">
+                    {% csrf_token %}
+                    {% load static %}
+                    <div>
+                        <label for="useranme" style="color: white;">Username</label>
+                        <input type="text" placeholder="Username" class="form-control" name="username">
+                    </div>
+                    <div>
+                        <label for="Password" style="color: white;">Password</label>
+                        <input type="password" placeholder="Password" class="form-control" name="Password">
+                    </div>
+                    <br>
+                    <button class="btn btn-success">
+                        Login
+                    </button>
+
+                </form>
+            </div>
+        </div>
+    </div>
+  </main>
+  <footer>
+    <!-- place footer here -->
+  </footer>
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+  </script>
+</body>
+
+</html>
