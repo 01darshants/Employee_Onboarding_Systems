@@ -6,6 +6,7 @@ Password = ''
 
 
 # Create your views here.
+# this is the loginaction
 def loginaction(request):
     global username, Password
     if request.method == "POST":
