@@ -7,6 +7,9 @@ Password = ''
 
 # Create your views here.
 # this is the loginaction
+def home(request):
+    return render(request, 'home.html')
+
 def loginaction(request):
     global username, Password
     if request.method == "POST":
