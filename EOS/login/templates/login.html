@@ -1,3 +1,5 @@
+{% load static %}
+
 <!doctype html>
 <html lang="en">
 
@@ -12,7 +14,7 @@
     integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <style>
         body {
-          background-image: url('static/Homepg/bgLog.jpg');
+          background-image: url('Homepg/bgLog.jpg');
           background-repeat: no-repeat;
           background-attachment: fixed;
           background-size: cover;
@@ -27,13 +29,13 @@
   </header>
   <main>
     <div class="container">
-        <div class="row justify-content-center align-item-center" style="margin-top: 250px;">
-            <div class=" offset-3 col-5">
-                <img class="mw-100" src="https://www.google.com/url?sa=i&url=https%3A%2F%2Felearningindustry.com%2Fdesigning-employee-onboarding-program-dos-donts&psig=AOvVaw0AIzVwODrTU4Ul5UApzJYU&ust=1699537300412000&source=images&cd=vfe&ved=0CBIQjRxqFwoTCJDZmPrDtIIDFQAAAAAdAAAAABAE">
+        <div class="row justify-content-center align-item-center" style="margin-top: 200px;">
+            <div class="col-5">
+                <img src="{% static 'Login.jpg' %}" class="mw-100">
             </div>
             <div class="col-4">
                 <!-- <h3 style="color: yellow;">Login</h3> -->
-                <form action="#" method="post" style="width: 400px; margin-top: 50px;">
+                <form action="#" method="post" style="width: 400px; margin-top: 0px;">
                     {% csrf_token %}
                     {% load static %}
                     <div>
@@ -43,6 +45,15 @@
                     <div>
                         <label for="Password" style="color: white;">Password</label>
                         <input type="password" placeholder="Password" class="form-control" name="Password">
+                    </div>
+                    <div>
+                        <label for="role" style="color: white;">Role</label>
+                        <select name="role" class="form-control">
+                            <option value="HR">HR</option>
+                            <option value="Fresher">Fresher</option>
+                            <option value="Experienced">Experienced</option>
+
+                        </select>
                     </div>
                     <br>
                     <button class="btn btn-success">
