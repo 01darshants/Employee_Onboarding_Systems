@@ -4,7 +4,7 @@
 <html lang="en">
 
 <head>
-  <title>Title</title>
+  <title>Login</title>
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -14,7 +14,7 @@
     integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <style>
         body {
-          background-image: url('Homepg/bgLog.jpg');
+          background-image: url('{% static 'Homepg/bgLog.jpg' %}');
           background-repeat: no-repeat;
           background-attachment: fixed;
           background-size: cover;
@@ -25,17 +25,23 @@
 
 <body>
   <header>
-    <!-- place navbar here -->
+<!--    <nav class="navbar navbar-expand-sm navbar-dark bg-primary">-->
+<!--        <a class="navbar-brand" href="" style="margin-left: 60px;">-->
+<!--            <img src="{% static 'SD_icons/home-address-icon-1.jpg' %}" style="width: 50px;">-->
+<!--        </a>-->
+<!--        <button class="btn btn-warning" type="submit" style="margin-left:1200px ;">Logout</button>-->
+<!--        </div>-->
+<!--    </nav>-->
   </header>
   <main>
     <div class="container">
         <div class="row justify-content-center align-item-center" style="margin-top: 200px;">
             <div class="col-5">
-                <img src="{% static 'Login.jpg' %}" class="mw-100">
+                <img src="{% static 'Homepg/login.png' %}">
             </div>
             <div class="col-4">
                 <!-- <h3 style="color: yellow;">Login</h3> -->
-                <form action="#" method="post" style="width: 400px; margin-top: 0px;">
+                <form action="#" method="post" style="width: 400px; margin-top: 100px;">
                     {% csrf_token %}
                     {% load static %}
                     <div>
@@ -46,15 +52,16 @@
                         <label for="Password" style="color: white;">Password</label>
                         <input type="password" placeholder="Password" class="form-control" name="Password">
                     </div>
-                    <div>
-                        <label for="role" style="color: white;">Role</label>
-                        <select name="role" class="form-control">
-                            <option value="HR">HR</option>
-                            <option value="Fresher">Fresher</option>
-                            <option value="Experienced">Experienced</option>
+<!--                    <div>-->
+<!--                        <label for="role" style="color: white;">Role</label>-->
+<!--                        <select name="role" class="form-control">-->
+<!--                            <option selected disabled>select from list below</option>-->
+<!--                            <option value="HR">HR</option>-->
+<!--                            <option value="Candidate">Candidate</option>-->
 
-                        </select>
-                    </div>
+
+<!--                        </select>-->
+<!--                    </div>-->
                     <br>
                     <button class="btn btn-success">
                         Login
