@@ -3,11 +3,15 @@ import mysql.connector as sql
 
 username = ''
 Password = ''
-role =''
+
 
 
 # Create your views here.
 # this is the loginaction
+def home(request):
+    return render(request,'home.html')
+
+
 def loginaction(request):
     global username, Password,role
     if request.method == "POST":
@@ -19,25 +23,20 @@ def loginaction(request):
                 username = value
             if key == "Password":
                 Password = value
-            if key == "role":
-                role = value
 
         cursor.execute(
-            "select * from users where username ='{}' and Password = '{}' and role = '{}' ".format(username, Password,role))
+            "select * from users where username ='{}' and Password = '{}' ".format(username, Password))
 
         user_data = cursor.fetchone()
-
+        # print(user_data)
         if user_data is None:
             return render(request, 'error.html')
         else:
             role = user_data[3]
-
             if role =='HR':
                 return render(request, 'admin.html')
-            elif role == 'Fresher':
+            elif role == 'Candidate':
                 return render(request, 'Fresher.html')
-            elif role == 'Experienced':
-                return render(request, 'Experienced.html')
 
     return render(request, 'login.html')
 
